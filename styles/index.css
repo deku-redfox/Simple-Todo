@@ -1,0 +1,137 @@
+.grid-column{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    padding-bottom: 10rem;
+    gap: 40px;
+    column-gap: 40px;
+}
+
+.todoName,
+.todoInfos,
+.todoList
+{ padding-inline: 16px ;}
+
+.todoCard{
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 12px;
+    padding-top: 16px;
+    overflow: hidden;
+}
+
+.todoHead, 
+.todoInfos, 
+.todoBody{ 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todoInfos{
+    padding-inline: 1rem;
+    padding-block: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.todoList{
+    background-color: whitesmoke;
+    border-block: 1px solid var(--borderColor);
+    padding-block: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.todoItem{ display: flex;}
+
+.badge{
+    width: 8px;
+    height: 100%;
+    margin-right: 6px;
+}
+
+.todoTitle{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.todoDesc{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    padding-inline: 6px;
+}
+
+.empty-text{
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openBtn{
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.openBtn:hover{ 
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+
+/** *** Overlay *** **/
+
+form{
+    height: 200px;
+    width: 400px;
+    text-align: center;
+}
+
+input{
+    height: 50px;
+    font-size: 1.6rem;
+}
+
+input[type='text']{
+    width: 86%;
+    padding-left: 16px;
+}
+
+.createActions,
+.dialogActions{ 
+    display: flex;
+    width: 100%;
+}
+
+input[type='submit'],
+input[type='button']
+{
+    background-color: var(--primaryColor);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+input[type='button']{ background-color: rgb(233, 13, 5); }
+
+.alertDialog{
+    width: 400px;
+    height: 200px;
+    font-size: 1.8rem;
+}
+
+
+
+
+
+

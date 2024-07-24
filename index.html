@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/general.css">
+</head>
+<body>
+
+    <div class="overlay js-create-overlay">
+
+        <form action="todo_page.html" class="js-form dialog">
+            <h1>Add a Todo</h1>
+            <input type="text" placeholder="Todo's Name" class="js-todo-name" required>
+            <div class="createActions">
+                <input type="submit" class="button">
+                <input type="button" value="Annuler" onclick="closeDialog('.js-create-overlay')">
+            </div>
+        </form>
+
+    </div>
+
+    <div class="overlay js-alert-overlay">
+
+        <div class="alertDialog dialog">
+            <h3>Delete all Todos</h3>
+            <p>Are you sure you want to delete all the todos</p>
+            <div class="dialogActions">
+                <input type="button" class="js-confirm" value="Confirm">
+                <input type="button" onclick="closeDialog('.js-alert-overlay')" value="Cancel">
+            </div>
+        </div>
+
+    </div>
+
+    <header>
+
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo" width="48" height="42">
+                <p class="logoTitle">Todo-Simple</p>
+            </div>
+
+            <div class="menuActions">
+
+                <button class="addBtn" onclick="openDialog('.js-create-overlay')">
+                    <img src="images/logo.png" alt="logo">
+                    <p>Create</p>
+                </button>
+
+                <div class="dropdown">
+                    <button class="sortBtn dropdown">
+                        <img src="images/sort.png" alt="sort image">
+                        <p>Sort</p>
+                    </button>
+                    <ul class="options">
+                        <li class="js-sort-option" id="nameAsc">Alphabetical Asc</li>
+                        <li class="js-sort-option" id="nameDesc">Alphabetical Desc</li>
+                        <li class="js-sort-option" id="length">Todo length</li>
+                    </ul>
+                </div>
+
+                <div class="menu dropdown">
+                    <button class="menuBtn">
+                        <img src="images/option.png" alt="options image">
+                    </button>
+                    <ul class="options">
+                        <li style="color: red;" onclick="openDialog('.js-alert-overlay')">Tout Supprimer</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    
+    <main>
+
+        <div class="container grid-column center js-list-card"></div>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+            <p>© Copyright Deku Redfox Art</p>
+            <div class="followUs">
+                <p>Follow Us:</p>
+                <div class="followLinks">
+                    <a href="#">
+                        <img src="images/facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/instagram.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="images/youtube.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="scripts/repository.js"></script>
+    <script src="scripts/general_fun.js"></script>
+    <script src="scripts/todoList.js"></script>
+    <script src="scripts/todoItem.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

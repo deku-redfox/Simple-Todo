@@ -1,0 +1,174 @@
+:root{
+
+    /**** COLORS ****/
+    --primaryColor: rgb(10, 147, 238);
+    --secondaryColor: purple;
+    --thirdColor: green;
+
+    --btnAddHover: rgb(2, 104, 172);
+    
+    --btnHoverColor: rgb(233, 233, 233);
+
+    --borderColor: rgba(233, 233, 233, 0.8);
+
+    /**** SHADOWS ****/
+    --softShadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/** *** RESET STYLES *** **/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{ list-style: none; }
+
+header{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-block: 2rem; 
+    background-color: white;
+}
+
+body{ padding-top: 16rem; }
+
+h1{ font-size: 2.6rem; }
+
+h2{ font-size: 1.8rem; }
+
+a{
+    text-decoration: none;
+    color: var(--primaryColor);
+    transition: ease 0.15s;
+}
+
+input{
+    border: 1px solid rgb(184, 184, 184);
+    outline: none;
+}
+
+input[type='checkbox']{ 
+    cursor: pointer; 
+    accent-color: var(--thirdColor);
+}
+
+input[type='checkbox']:hover{ transform: scale(1.2); }
+
+button{
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-inline: 1.4rem;
+    height: 44px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--borderColor);
+    transition: ease 0.15s;
+}
+
+button img{
+    width: 26px;
+    aspect-ratio: 1.14;
+}
+
+button:hover,
+.button:hover
+{ opacity: 0.6; }
+
+.dropdown:hover button
+{ background-color: var(--btnHoverColor);}
+
+footer{ background-color: rgb(26, 26, 26); }
+
+
+/** *** REUSABLE STYLES *** **/
+
+.container{ padding-inline: 10rem; }
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+    transition: ease 0.2s;
+}
+
+.overlay.active{ display: flex; }
+
+.dialog{
+    background-color: white;
+    border-radius: 4;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.center{ min-height: calc(100vh - 240px); }
+
+.dropdown{ 
+    position: relative; 
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown .options{
+    position: absolute;
+    top: calc(100% + 8px);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.15);
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.15s ease-in-out;
+    
+}
+
+.dropdown:hover .options{
+    visibility: visible;
+    overflow: visible;
+    max-height: 200px;
+}
+
+.options li{
+    padding: 1rem 1.2rem;
+    font-size: 1.4rem;
+    min-width: 140px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.options li:hover{ background-color: var(--btnHoverColor); } 
+
+.options li:not(li:last-child){ border-bottom: 1px solid var(--borderColor); }
+
+.scroll::-webkit-scrollbar{ width: 10px;}
+
+.scroll::-webkit-scrollbar-thumb{ 
+    background-color: var(--secondaryColor); 
+    border-radius: 12px;
+}
+
+.badge.blue{ background-color: var(--primaryColor); }
+
+.badge.red { background-color: red; }
+
+.badge.green { background-color: var(--thirdColor);}

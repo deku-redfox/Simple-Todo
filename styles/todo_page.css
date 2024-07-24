@@ -1,0 +1,97 @@
+/** *** Main Row *** **/
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/** *** Todos Section *** **/
+
+.section1, .section2{ flex: 1; }
+
+h2{ color: var(--secondaryColor);}
+
+.todoItem{ 
+    display: flex;
+    margin-top: 1.4rem;
+    padding-right: 10px;
+    max-width: 460px;
+    max-height: 106px;
+    box-shadow: var(--softShadow);
+    position: relative;
+}
+
+.delete{
+    border-radius: 50%;
+    background-color: red;
+    padding-inline: 3px;
+    height: unset;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+
+.badge{
+    width: 8px;
+    max-height: 106px;
+    margin-right: 6px;
+}
+
+.todoTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.todoText{ flex: 1; }
+
+.todoBody,
+.todoBottom{ 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.todoDesc{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.todoBottom{ font-size: 1.2rem; }
+
+.todoBottom span{ font-weight: bold; }
+
+
+/** *** Create Section *** **/
+
+.section2{
+    border-left: 1px solid black;
+    padding-left: 1.4rem;
+}
+
+.section2 .column{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+
+input:not(input[type='checkbox']){
+    height: 40px;
+    border-radius: 12px;
+    padding-left: 12px;
+}
+
+textarea{
+    height: 100px;
+    padding-top: 8px;
+    padding-left: 16px;
+}
+
+.btn{
+    color: white;
+    border: none;
+    background-color: var(--thirdColor);
+}

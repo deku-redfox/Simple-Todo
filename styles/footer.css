@@ -1,0 +1,21 @@
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 80px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.followLinks a{
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.followUs img{
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+}
